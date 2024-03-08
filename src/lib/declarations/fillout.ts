@@ -42,7 +42,7 @@ export interface FilloutRequest extends Request {
 export type filterResponse = {
   id: string;
   name: string;
-  type: 'ShortAnswer' | 'DatePicker';
+  type: 'ShortAnswer' | 'DatePicker' | 'LongAnswer' | 'MultipleChoice' | 'EmailInput';
   value: string;
 }
 

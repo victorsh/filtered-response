@@ -28,6 +28,6 @@ export const getFormData = async (formId: string, query?: FilterQuery) => {
     return error
   }
 }
-;(async () => {
-  await getFormData('cLZojxk94ous', {})
-})()
+// ;(async () => {
+//   await getFormData('cLZojxk94ous', {})
+// })()
