@@ -64,13 +64,15 @@ app.get(
       for (const resp of formData.responses) {
         let passed = true
         for (const question of resp.questions) {
-          for (const filter of req.body) {
-            if (question.id === filter.id) {
-              if (
-                !checkCondition(filter.value, question.value, filter.condition, question.type)
-              ) {
-                passed = false
-                break
+          if (req.body) {
+            for (const filter of req.body) {
+              if (question.id === filter.id) {
+                if (
+                  !checkCondition(filter.value, question.value, filter.condition, question.type)
+                ) {
+                  passed = false
+                  break
+                }
               }
             }
           }
