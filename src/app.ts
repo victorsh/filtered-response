@@ -64,7 +64,7 @@ app.get(
       for (const resp of formData.responses) {
         let passed = true
         for (const question of resp.questions) {
-          if (req.body) {
+          if (Object.keys(req.body).length > 0) {
             for (const filter of req.body) {
               if (question.id === filter.id) {
                 if (
